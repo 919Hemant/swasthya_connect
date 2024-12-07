@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Medicine Tracker</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<div class="container">
+<header>
+<h1>Swasthya Connect</h1>
+<div class="icons">
+<i class="fas fa-user-md icon doctor"></i>
+<i class="fas fa-hospital icon hospital"></i>
+</div>
+</header>
+<main>
+<button id="addMedicineBtn" class="btn-add">
+<i class="fas fa-plus"></i> Add New Medicine
+</button>
+<div id="medicineList" class="medicine-list"></div>
+<div id="recommendation" class="recommendation"></div>
+</main>
+<div id="modal" class="modal">
+<div class="modal-content">
+<h2>Add New Medicine</h2>
+<form id="addMedicineForm">
+<div class="form-group">
+<label for="medicineName">Medicine Name</label>
+<input type="text" id="medicineName" required>
+</div>
+<div class="form-group">
+<label for="medicineSchedule">Schedule</label>
+<select id="medicineSchedule" required>
+<option value="">Select schedule</option>
+<option value="daily">Daily</option>
+<option value="weekly">Weekly</option>
+<option value="monthly">Monthly</option>
+<option value="as-needed">As Needed</option>
+</select>
+</div>
+<div class="form-group">
+<label>Time of Day</label>
+<div class="time-of-day">
+<label><input type="checkbox" name="timeOfDay" value="morning"> Morning</label>
+<label><input type="checkbox" name="timeOfDay" value="afternoon"> Afternoon</label>
+<label><input type="checkbox" name="timeOfDay" value="evening"> Evening</label>
+<label><input type="checkbox" name="timeOfDay" value="night"> Night</label>
+</div>
+</div>
+<div class="form-group">
+<label for="medicineDosage">Dosage</label>
+<input type="text" id="medicineDosage" placeholder="e.g., 1 tablet, 5ml">
+</div>
+<div class="form-group">
+<label for="medicineNotes">Notes (Optional)</label>
+<textarea id="medicineNotes"></textarea>
+</div>
+<button type="submit" class="btn-submit">Add Medicine</button>
+</form>
+</div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
